@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prijal Solanki — Virtual Resume</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a1a2e'/><text y='.9em' font-size='55' x='50%' text-anchor='middle' font-family='serif' fill='%23c8a96e'>PS</text></svg>"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style2.css"/>
+  <link rel="stylesheet" href="style.css"/>
   
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧑‍💻</text></svg>"/>
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-<div id="progress-bar"></div>
-<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
-
 <!-- NAVBAR -->
 <nav id="navbar">
-  <div class="nav-logo">Prijal<span>.</span></div>
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="theme-wrap">
-      <i class="fas fa-sun theme-icon" id="theme-icon"></i>
-      <button id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode"></button>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
+  <div class="nav-logo">Prijal<span>..</span></div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -51,32 +41,44 @@
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid-lines"></div>
-  <canvas id="particles-canvas"></canvas>
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-label"><i class="fas fa-circle"></i> Open to Opportunities</div>
       <h1>Prijal<br><span class="gold">Solanki</span></h1>
-      <p class="hero-tagline"><em>"Learn Smart, Not Hard"</em></p>
-      <div class="typed-wrap"><span id="typed-text"></span></div>
+      <p class="hero-tagline"><strong>Learn Smart, Not Hard</strong> — MCA Student & Full-Stack Developer</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary magnetic"><i class="fas fa-paper-plane"></i> Hire Me</a>
-        <a href="#projects" class="btn btn-outline magnetic"><i class="fas fa-code"></i> View Projects</a>
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+        <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
       </div>
     </div>
     <div>
-      <div class="hero-card tilt-card">
+      <div class="hero-card">
         <div class="hero-avatar">
             <img src="myphoto.png" alt="Prijal Solanki"/>
         </div>
         <h3>Prijal Solanki</h3>
         <p>MCA Student · Full-Stack Developer</p>
         <div class="hero-stats">
-          <div class="stat-box"><div class="stat-num" data-target="2">0</div><div class="stat-lbl">Projects Built</div></div>
-          <div class="stat-box"><div class="stat-num" data-target="10">0</div><div class="stat-lbl">Tech Skills</div></div>
-          <div class="stat-box"><div class="stat-num" data-target="3">0</div><div class="stat-lbl">Languages Spoken</div></div>
-          <div class="stat-box"><div class="stat-num">∞</div><div class="stat-lbl">Curiosity</div></div>
+          <div class="stat-box">
+            <div class="stat-num">2+</div>
+            <div class="stat-lbl">Projects Built</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">10+</div>
+            <div class="stat-lbl">Tech Skills</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3</div>
+            <div class="stat-lbl">Languages Spoken</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">∞</div>
+            <div class="stat-lbl">Curiosity</div>
+          </div>
         </div>
-        <div class="location-badge"><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat, India</div>
+        <div class="location-badge">
+          <i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat, India
+        </div>
       </div>
     </div>
   </div>
@@ -87,9 +89,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-visual reveal">
-        <!-- <div class="about-img-box tilt-card"></div>
-          -->
-        <div class="about-img-box tilt-card"><img src="myphoto2.jpeg" alt="Prijal Solanki"/></div>
+        <div class="about-img-box"><img src="myphoto2.jpeg" alt="Prijal Solanki"/></div>
         <div class="about-float">🎓 MCA Pursuing</div>
       </div>
       <div class="about-text reveal">
@@ -118,22 +118,22 @@
     <h2 class="section-title reveal">Academic Journey</h2>
     <div class="section-line"></div>
     <div class="edu-cards">
-      <div class="edu-card reveal tilt-card">
+      <div class="edu-card reveal">
         <span class="edu-badge">✅ COMPLETED</span>
         <h3>SS Agarwal College</h3>
         <div class="edu-deg">Bachelor of Computer Applications (BCA)</div>
         <div class="edu-loc"><i class="fas fa-map-marker-alt" style="color:var(--accent2);margin-right:.3rem"></i>Navsari, Gujarat, India</div>
         <span class="edu-year"><i class="fas fa-calendar"></i> Graduated 2025</span>
       </div>
-      <div class="edu-card reveal tilt-card">
-        <span class="edu-badge">🔄 PURSUING</span>
+      <div class="edu-card reveal">
+        <span class="edu-badge" style="background:linear-gradient(135deg,var(--accent2),#e8c97e);color:#fff;">🔄 PURSUING</span>
         <h3>LJ University</h3>
         <div class="edu-deg">Master of Computer Applications (MCA)</div>
         <div class="edu-loc"><i class="fas fa-map-marker-alt" style="color:var(--accent2);margin-right:.3rem"></i>Ahmedabad, Gujarat, India</div>
         <span class="edu-year"><i class="fas fa-calendar"></i> 2025 — Present</span>
       </div>
     </div>
-    <div class="achievement-strip reveal">
+    <div class="achievement-strip reveal" style="margin-top:1.5rem;">
       <div class="ach-icon"><i class="fas fa-trophy"></i></div>
       <div class="ach-text">
         <h4>Certifications & Achievements</h4>
@@ -163,8 +163,10 @@
         <div class="skill-group reveal" style="margin-top:2rem;">
           <h4><i class="fas fa-layer-group"></i> Frameworks & Libraries</h4>
           <div class="tags-cloud">
-            <span class="tag">React.js</span><span class="tag">Node.js</span>
-            <span class="tag">Express.js</span><span class="tag">ASP.NET (VB)</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">ASP.NET (VB)</span>
           </div>
         </div>
       </div>
@@ -178,15 +180,21 @@
         <div class="skill-group reveal" style="margin-top:2rem;">
           <h4><i class="fas fa-tools"></i> Tools & IDEs</h4>
           <div class="tags-cloud">
-            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span>
-            <span class="tag">Postman</span><span class="tag">Spyder</span><span class="tag">MS Office</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Spyder (Anaconda3)</span>
+            <span class="tag">MS Office</span>
           </div>
         </div>
         <div class="skill-group reveal" style="margin-top:2rem;">
           <h4><i class="fas fa-brain"></i> Core Concepts</h4>
           <div class="tags-cloud">
-            <span class="tag">DSA</span><span class="tag">OOP</span>
-            <span class="tag">MVC Architecture</span><span class="tag">REST APIs</span>
+            <span class="tag">DSA</span>
+            <span class="tag">OOP</span>
+            <span class="tag">MVC Architecture</span>
+            <span class="tag">REST APIs</span>
           </div>
         </div>
       </div>
@@ -201,7 +209,8 @@
     <h2 class="section-title reveal">What I've Built</h2>
     <div class="section-line"></div>
     <div class="projects-grid">
-      <div class="proj-card reveal tilt-card">
+
+      <div class="proj-card reveal">
         <div class="proj-header">
           <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
           <span class="proj-year">2024 · 3 Months</span>
@@ -213,13 +222,17 @@
           <li>Implemented dynamic React.js UI components with component-level state management for optimized page interactions.</li>
         </ul>
         <div class="proj-tech">
-          <span class="tech-tag">React.js</span><span class="tech-tag">Node.js</span>
-          <span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">MERN</span>
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express.js</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">MERN</span>
         </div>
       </div>
-      <div class="proj-card reveal tilt-card">
+
+      <div class="proj-card reveal">
         <div class="proj-header">
-          <div class="proj-icon"><i class="fas fa-car"></i></div>
+          <div class="proj-icon" style="background:linear-gradient(135deg,var(--accent2),#e8c97e);"><i class="fas fa-car"></i></div>
           <span class="proj-year">2023 · 2 Months</span>
         </div>
         <h3>Car Selling System</h3>
@@ -229,20 +242,23 @@
           <li>Implemented secure user authentication with session management and server-side validation to prevent SQL injection attacks.</li>
         </ul>
         <div class="proj-tech">
-          <span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span>
-          <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span>
+          <span class="tech-tag">PHP</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
         </div>
       </div>
+
     </div>
     <div style="text-align:center;margin-top:2rem;">
-      <a href="https://github.com/PrijalSolanki" target="_blank" class="btn btn-outline magnetic" style="display:inline-flex;">
+      <a href="https://github.com/PrijalSolanki" target="_blank" class="btn btn-outline" style="display:inline-flex;">
         <i class="fab fa-github"></i> View All on GitHub
       </a>
     </div>
   </div>
 </section>
 
-<!-- ADDITIONAL -->
+<!-- ADDITIONAL SKILLS -->
 <section id="additional">
   <div class="container">
     <div class="section-label reveal"><i class="fas fa-star"></i> More About Me</div>
@@ -251,11 +267,17 @@
     <div class="add-grid">
       <div class="add-card reveal">
         <div class="add-icon"><i class="fas fa-sitemap"></i></div>
-        <div><h4>Data Structures & Algorithms</h4><p>Active practice in arrays, linked lists, trees, graphs, dynamic programming, and sorting algorithms. Focused on building strong problem-solving foundations.</p></div>
+        <div>
+          <h4>Data Structures & Algorithms</h4>
+          <p>Active practice in arrays, linked lists, trees, graphs, dynamic programming, and sorting algorithms. Focused on building strong problem-solving foundations.</p>
+        </div>
       </div>
       <div class="add-card reveal">
         <div class="add-icon"><i class="fas fa-comments"></i></div>
-        <div><h4>Multilingual Communication</h4><p>Fluent in <strong>English</strong>, <strong>Gujarati</strong>, and <strong>Hindi</strong> — effective written and verbal communication across diverse teams and environments.</p></div>
+        <div>
+          <h4>Multilingual Communication</h4>
+          <p>Fluent in <strong>English</strong>, <strong>Gujarati</strong>, and <strong>Hindi</strong> — effective written and verbal communication across diverse teams and environments.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -272,20 +294,47 @@
         <h3>Get In Touch</h3>
         <p>Whether you have an opportunity, a project idea, or just want to say hello — my inbox is always open!</p>
         <div class="contact-links">
-          <a href="mailto:Prijalsolanki26032005@gmail.com" class="contact-link"><div class="c-icon mail"><i class="fas fa-envelope"></i></div><div><div class="c-label">Email</div><div class="c-val">Prijalsolanki26032005@gmail.com</div></div></a>
-          <a href="tel:6354664512" class="contact-link"><div class="c-icon phone"><i class="fas fa-phone"></i></div><div><div class="c-label">Phone</div><div class="c-val">+91 6354664512</div></div></a>
-          <a href="https://www.linkedin.com/in/prijal-darji-86b01738a/" target="_blank" class="contact-link"><div class="c-icon linkedin"><i class="fab fa-linkedin-in"></i></div><div><div class="c-label">LinkedIn</div><div class="c-val">prijal-darji-86b01738a</div></div></a>
-          <a href="https://github.com/PrijalSolanki" target="_blank" class="contact-link"><div class="c-icon github"><i class="fab fa-github"></i></div><div><div class="c-label">GitHub</div><div class="c-val">PrijalSolanki</div></div></a>
-          <div class="contact-link"><div class="c-icon loc"><i class="fas fa-map-marker-alt"></i></div><div><div class="c-label">Location</div><div class="c-val">Ahmedabad, Gujarat, India</div></div></div>
+          <a href="mailto:Prijalsolanki26032005@gmail.com" class="contact-link">
+            <div class="c-icon mail"><i class="fas fa-envelope"></i></div>
+            <div><div class="c-label">Email</div><div class="c-val">Prijalsolanki26032005@gmail.com</div></div>
+          </a>
+          <a href="tel:6354664512" class="contact-link">
+            <div class="c-icon phone"><i class="fas fa-phone"></i></div>
+            <div><div class="c-label">Phone</div><div class="c-val">+91 6354664512</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/prijal-darji-86b01738a/" target="_blank" class="contact-link">
+            <div class="c-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+            <div><div class="c-label">LinkedIn</div><div class="c-val">prijal-darji-86b01738a</div></div>
+          </a>
+          <a href="https://github.com/PrijalSolanki" target="_blank" class="contact-link">
+            <div class="c-icon github"><i class="fab fa-github"></i></div>
+            <div><div class="c-label">GitHub</div><div class="c-val">PrijalSolanki</div></div>
+          </a>
+          <div class="contact-link" style="cursor:default;">
+            <div class="c-icon loc"><i class="fas fa-map-marker-alt"></i></div>
+            <div><div class="c-label">Location</div><div class="c-val">Ahmedabad, Gujarat, India</div></div>
+          </div>
         </div>
       </div>
       <div class="contact-form reveal">
         <h3>Send a Message</h3>
-        <div class="form-group"><label>YOUR NAME</label><input type="text" placeholder="e.g. Riya Patel"/></div>
-        <div class="form-group"><label>YOUR EMAIL</label><input type="email" placeholder="e.g. riya@example.com"/></div>
-        <div class="form-group"><label>SUBJECT</label><input type="text" placeholder="e.g. Internship Opportunity"/></div>
-        <div class="form-group"><label>MESSAGE</label><textarea placeholder="Write your message here..."></textarea></div>
-        <button class="form-submit magnetic"><i class="fas fa-paper-plane"></i>&nbsp; Send Message</button>
+        <div class="form-group">
+          <label>YOUR NAME</label>
+          <input type="text" placeholder="e.g. Riya Patel" />
+        </div>
+        <div class="form-group">
+          <label>YOUR EMAIL</label>
+          <input type="email" placeholder="e.g. riya@example.com" />
+        </div>
+        <div class="form-group">
+          <label>SUBJECT</label>
+          <input type="text" placeholder="e.g. Internship Opportunity" />
+        </div>
+        <div class="form-group">
+          <label>MESSAGE</label>
+          <textarea placeholder="Write your message here..."></textarea>
+        </div>
+        <button class="form-submit"><i class="fas fa-paper-plane"></i> &nbsp;Send Message</button>
       </div>
     </div>
   </div>
@@ -293,11 +342,15 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-name">Prijal Solanki</div>
-  <p style="font-size:.88rem;color:rgba(255,255,255,.75);font-style:italic;">"Learn Smart, Not Hard"</p>
+  <div class="footer-name">Prijal <span>Solanki</span></div>
+  <p style="font-size:.88rem;color:rgba(255,255,255,.5);font-style:italic;">"Learn Smart, Not Hard"</p>
   <div class="footer-links">
-    <a href="#hero">Home</a><a href="#about">About</a><a href="#education">Education</a>
-    <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
   <div class="footer-socials">
     <a href="mailto:Prijalsolanki26032005@gmail.com" class="fsoc"><i class="fas fa-envelope"></i></a>
@@ -308,7 +361,64 @@
   <p>© 2025 Prijal Solanki · All Rights Reserved · Made with ❤️ in Ahmedabad</p>
 </footer>
 
-<script src="main.js"></script>
-</body>
+<script>
+  // Navbar scroll shadow
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  });
 
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Skill bar animation
+  const skillObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.skill-fill').forEach(bar => {
+          bar.style.width = bar.dataset.w + '%';
+        });
+        skillObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.skill-group').forEach(el => skillObs.observe(el));
+
+  // Smooth active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent2)' : '';
+    });
+  });
+
+  // Form submit feedback
+  document.querySelector('.form-submit').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-check"></i> &nbsp;Message Sent!';
+    this.style.background = '#22c55e';
+    setTimeout(() => {
+      this.innerHTML = '<i class="fas fa-paper-plane"></i> &nbsp;Send Message';
+      this.style.background = '';
+    }, 2500);
+  });
+</script>
+</body>
 </html>
