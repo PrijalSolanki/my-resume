@@ -145,13 +145,19 @@
       animation: fadeLeft .8s .2s ease both;
     }
     .hero-avatar {
-      width: 90px; height: 90px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem; color: #fff; font-weight: 700;
-      margin-bottom: 1.2rem;
-    }
+  width: 90px; height: 90px; border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  border: 3px solid var(--accent2);
+  box-shadow: 0 4px 16px rgba(200,169,110,0.3);
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
     .hero-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: .3rem; }
     .hero-card p { color: var(--muted); font-size: .88rem; }
     .hero-stats {
@@ -202,23 +208,26 @@
     .about-visual {
       position: relative;
     }
-    .about-img-box {
-      width: 100%; aspect-ratio: 1;
-      max-width: 320px;
-      background: linear-gradient(135deg, var(--accent) 0%, #2d2d50 50%, var(--accent2) 100%);
-      border-radius: 24px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 6rem; color: rgba(255,255,255,0.15);
-      font-weight: 700;
-      position: relative; overflow: hidden;
-    }
-    .about-img-box::after {
-      content: 'PS';
-      position: absolute;
-      font-size: 7rem; color: rgba(255,255,255,0.2);
-      font-family: 'Playfair Display', serif; font-weight: 700;
-    }
+   .about-img-box {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid var(--accent2);
+  box-shadow: 0 12px 40px rgba(200,169,110,0.2);
+}
+
+.about-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Remove the ::after pseudo element — delete it entirely */
+   
     .about-float {
       position: absolute; bottom: -16px; right: -16px;
       background: var(--accent2); color: #fff;
@@ -484,7 +493,7 @@
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <div class="nav-logo">Prijal<span>.</span></div>
+  <div class="nav-logo">Prijal<span>..</span></div>
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -522,7 +531,9 @@
     </div>
     <div>
       <div class="hero-card">
-        <div class="hero-avatar">PS</div>
+        <div class="hero-avatar">
+            <img src="myphoto.png" alt="Prijal Solanki"/>
+        </div>
         <h3>Prijal Solanki</h3>
         <p>MCA Student · Full-Stack Developer</p>
         <div class="hero-stats">
@@ -556,7 +567,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-visual reveal">
-        <div class="about-img-box"></div>
+        <div class="about-img-box"><img src="myphoto2.jpeg" alt="Prijal Solanki"/></div>
         <div class="about-float">🎓 MCA Pursuing</div>
       </div>
       <div class="about-text reveal">
